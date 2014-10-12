@@ -1,0 +1,81 @@
+{
+  "work1": {
+  	"title": "Work Section<br><span>one</span>",
+    "heroimg": "maccas.png",
+    "herocolor": "#8d0b09",
+    "category": "web design + development",
+    "desc": "My latest work involved a complete rebuild of the mcdonalds.com.au website, McDonald's wanted a completely responsive build that would look and work well for desktop/tablet/mobile, the website was built mobile first, complete with touch swipes, responsive sliders/tables and an informative map.",
+    "subimgs": {
+      "subimg1": "sub1.jpg",
+      "subimg2": "sub2.jpg"
+    },
+    "url": "http://www.google.com",
+    "urltext": "website"
+  },
+  "work2": {
+  	"title": "Work Section<br><span>two</span>",
+    "heroimg": "dealernewsletter.png",
+    "herocolor": "#2675ad",
+    "category": "web design + development",
+    "desc": "Volkswagen requested a website that was built for dealers, they needed to be able to login, upload and view their various marketing campaigns. The website had to be built to be iPad friendly and needed special considerations for touch control. I was responsible for the front-end development. Website was produced for Tribal DDB. View the site here (requires a login, which I can provide): Volkswagen Dealer Newsletter",
+    "subimgs": {
+      "subimg1": "sub1.jpg",
+      "subimg2": "sub2.jpg"
+    },
+    "url": "http://www.google.com",
+    "urltext": "website"
+  },
+  "work3": {
+    "title": "Work Section<br><span>three</span>",
+    "heroimg": "mcdonalds.png",
+    "herocolor": "#8d0b09",
+    "category": "web design + development",
+    "desc": "I worked with a team in creating a website for the McDonald's Open Doors Tour. I was responsible for the web design and front-end development. McDonald's wanted to give customers the opportunity to visit various stores around Australia and see how their food is made.",
+    "subimgs": {
+      "subimg1": "sub1.jpg",
+      "subimg2": "sub2.jpg"
+    },
+    "url": "http://www.google.com",
+    "urltext": "website"
+  },
+  "work4": {
+  	"title": "Work Section<br><span>four</span>",
+    "heroimg": "volkswagenmobile.png",
+    "herocolor": "#2675ad",
+    "category": "web design + development",
+    "desc": "Volkswagen came to Tribal DDB for a complete mobile build of their current website, the build had to work on various mobile devices and had to be fast, snappy and appealing. I was responsible for the front-end build. Work was produced for Tribal DDB.",
+    "subimgs": {
+      "subimg1": "sub1.jpg",
+      "subimg2": "sub2.jpg"
+    },
+    "url": "http://www.google.com",
+    "urltext": "website"
+  },
+  "work5": {
+  	"title": "Work Section<br><span>five</span>",
+    "heroimg": "telstraemail.png",
+    "herocolor": "#0c6162",
+    "desc": "web design + development",
+    "desc": "Volkswagen came to Tribal DDB for a complete mobile build of their current website, the build had to work on various mobile devices and had to be fast, snappy and appealing. I was responsible for the front-end build. Work was produced for Tribal DDB.",
+    "subimgs": {
+      "subimg1": "sub1.jpg",
+      "subimg2": "sub2.jpg"
+    },
+    "url": "http://www.google.com",
+    "urltext": "website"
+  },
+  "work6": {
+  	"title": "Work Section<br><span>six</span>",
+    "heroimg": "work2.jpg",
+    "herocolor": "#8d0b09",
+    "category": "web design + development",
+    "desc": "I have been responsible for various design and development work for Telstra Emails. The briefs have been to constantly keep the emails bright, energetic and engaging.",
+    "subimgs": {
+      "subimg1": "sub1.jpg",
+      "subimg2": "sub2.jpg"
+    },
+    "url": "http://www.google.com",
+    "urltext": "website"
+  }
+
+}

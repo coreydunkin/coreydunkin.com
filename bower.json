@@ -1,0 +1,14 @@
+{
+  "name": "2014",
+  "private": true,
+  "dependencies": {
+    "modernizr": "~2.6.2",
+    "jquery": "~1.11.0",
+    "greensock": "latest",
+    "angular": "~1.2.26",
+    "underscore": "latest",
+    "animate.css": "latest",
+    "angular-sanitize": "~1.2.26"
+  },
+  "devDependencies": {}
+}

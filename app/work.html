@@ -1,0 +1,14 @@
+<div class="wrapper work">
+    <ul>
+        <li ng-repeat="item in work" style="background-image:url('images/work/{{item.heroimg}}');background-color:{{item.herocolor}};">
+
+        <div class="title-container">
+        	<h2 ng-bind-html="item.title"></h2>
+        </div>
+		<div class="body-container">
+			<p class="hidden" ng-bind-html="item.desc"></p>
+		</div>
+
+        </li>
+    </ul>
+</div><!-- end .work -->
