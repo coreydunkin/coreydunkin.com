@@ -3,7 +3,8 @@
         <li ng-repeat="item in work" style="background-image:url('images/work/{{item.heroimg}}');background-color:{{item.herocolor}};">
 
         <div class="title-container">
-        	<h2 ng-bind-html="item.title"></h2>
+        	<h2 ng-bind-html="item.title"></h2><br>
+            <a href="{{item.url}}" target="_blank">{{item.urltext}}</a>
         </div>
 		<div class="body-container">
 			<p class="hidden" ng-bind-html="item.desc"></p>

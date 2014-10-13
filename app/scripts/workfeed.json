@@ -1,6 +1,6 @@
 {
   "work1": {
-  	"title": "Work Section<br><span>one</span>",
+  	"title": "MCDONALDS.COM.AU<br><span>RELAUNCH</span>",
     "heroimg": "maccas.png",
     "herocolor": "#8d0b09",
     "category": "web design + development",
@@ -9,11 +9,11 @@
       "subimg1": "sub1.jpg",
       "subimg2": "sub2.jpg"
     },
-    "url": "http://www.google.com",
-    "urltext": "website"
+    "url": "https://mcdonalds.com.au/",
+    "urltext": "https://mcdonalds.com.au/"
   },
   "work2": {
-  	"title": "Work Section<br><span>two</span>",
+  	"title": "VOLKSWAGEN<br><span>NEWSLETTER</span>",
     "heroimg": "dealernewsletter.png",
     "herocolor": "#2675ad",
     "category": "web design + development",
@@ -21,12 +21,10 @@
     "subimgs": {
       "subimg1": "sub1.jpg",
       "subimg2": "sub2.jpg"
-    },
-    "url": "http://www.google.com",
-    "urltext": "website"
+    }
   },
   "work3": {
-    "title": "Work Section<br><span>three</span>",
+    "title": "MCDONALD'S<br><span>OPEN DOORS</span>",
     "heroimg": "mcdonalds.png",
     "herocolor": "#8d0b09",
     "category": "web design + development",
@@ -35,11 +33,11 @@
       "subimg1": "sub1.jpg",
       "subimg2": "sub2.jpg"
     },
-    "url": "http://www.google.com",
-    "urltext": "website"
+    "url": "http://www.coreydunkin.com/clients/opendoors/",
+    "urltext": "WEBSITE LINK"
   },
   "work4": {
-  	"title": "Work Section<br><span>four</span>",
+  	"title": "VOLKSWAGEN<br><span>MOBILE</span>",
     "heroimg": "volkswagenmobile.png",
     "herocolor": "#2675ad",
     "category": "web design + development",
@@ -48,11 +46,11 @@
       "subimg1": "sub1.jpg",
       "subimg2": "sub2.jpg"
     },
-    "url": "http://www.google.com",
-    "urltext": "website"
+    "url": "http://m.volkswagen.com.au/",
+    "urltext": "http://m.volkswagen.com.au/"
   },
   "work5": {
-  	"title": "Work Section<br><span>five</span>",
+  	"title": "TELSTRA<br><span>EMAILS</span>",
     "heroimg": "telstraemail.png",
     "herocolor": "#0c6162",
     "desc": "web design + development",
@@ -60,22 +58,7 @@
     "subimgs": {
       "subimg1": "sub1.jpg",
       "subimg2": "sub2.jpg"
-    },
-    "url": "http://www.google.com",
-    "urltext": "website"
-  },
-  "work6": {
-  	"title": "Work Section<br><span>six</span>",
-    "heroimg": "work2.jpg",
-    "herocolor": "#8d0b09",
-    "category": "web design + development",
-    "desc": "I have been responsible for various design and development work for Telstra Emails. The briefs have been to constantly keep the emails bright, energetic and engaging.",
-    "subimgs": {
-      "subimg1": "sub1.jpg",
-      "subimg2": "sub2.jpg"
-    },
-    "url": "http://www.google.com",
-    "urltext": "website"
+    }
   }
 
 }

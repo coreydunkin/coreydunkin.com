@@ -66,7 +66,7 @@ return {
 app.controller('HomeController', function($scope, $interval, $timeout) {
   $scope.pageClass = 'page-home';
   $('html').css("-webkit-animation-play-state", "running");
-  $('h1.logo:after').css("-webkit-animation-play-state", "running");
+  $('h1.logo .symbol').css("-webkit-animation-play-state", "running");
   var heroText = $('h2.herotext'),
       subText = $('h2.subtext'),
       heroImg = $('.heroImg'),
@@ -393,12 +393,12 @@ loop();
 app.controller('AboutController', function($scope) {
 	$scope.pageClass = 'page-about';
   $('html').css("-webkit-animation-play-state", "running");
-  $('h1.logo:after').css("-webkit-animation-play-state", "running");
+  $('h1.logo .symbol').css("-webkit-animation-play-state", "running");
 }); 
 
 app.controller('WorkController', function($scope, $http) {
     $('html').css("-webkit-animation-play-state", "paused");
-    $('h1.logo:after').css("-webkit-animation-play-state", "paused");
+    $('h1.logo .symbol').css("-webkit-animation-play-state", "paused");
 
     $http.get('scripts/workfeed.json').
     // $http.get('https://cdn.contentful.com/spaces/playground/entries/nyancat?access_token=1d067d61111a2a1a06fdfc26e841e8a32de88d484277c4300a763b4c040c2316').
@@ -429,7 +429,7 @@ app.controller('WorkController', function($scope, $http) {
 app.controller('ContactController', function($scope) {
 	$scope.pageClass = 'page-contact'; 
   $('html').css("-webkit-animation-play-state", "running");
-  $('h1.logo:after').css("-webkit-animation-play-state", "running");
+  $('h1.logo .symbol').css("-webkit-animation-play-state", "running");
 }); 
 
 // Randomly generate triangles for the background
