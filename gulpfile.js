@@ -31,7 +31,7 @@ gulp.task('html', ['styles', 'scripts'], function () {
     return gulp.src('app/*.html')
         .pipe($.useref.assets({searchPath: '{.tmp,app}'}))
         .pipe(jsFilter)
-        // .pipe($.uglify())
+        .pipe($.uglify())
         .pipe(jsFilter.restore())
         .pipe(cssFilter)
         .pipe($.csso())
@@ -124,10 +124,10 @@ gulp.task('watch', ['connect', 'serve'], function () {
         'app/images/**/*'
     ]).on('change', function (file) {
         server.changed(file.path);
-    });
+    }, { interval: 500 });
 
-    gulp.watch('app/styles/**/*.scss', ['styles']);
-    gulp.watch('app/scripts/**/*.js', ['scripts']);
-    gulp.watch('app/images/**/*', ['images']);
-    gulp.watch('bower.json', ['wiredep']);
+    gulp.watch('app/styles/**/*.scss', ['styles'], { interval: 500 });
+    gulp.watch('app/scripts/**/*.js', ['scripts'], { interval: 500 });
+    gulp.watch('app/images/**/*', ['images'], { interval: 500 });
+    gulp.watch('bower.json', ['wiredep'], { interval: 500 });
 });

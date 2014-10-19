@@ -38,11 +38,11 @@ app.config(['$routeProvider', '$locationProvider',
 
 // Header nav stuff
 
-app.controller('HeaderController', function($scope, $location) {
+app.controller('HeaderController', [ '$scope', '$location', function($scope, $location) {
     $scope.isActive = function(route) {
         return route === $location.path();
     }
-});
+}]);
 
 // end Header nav stuff
 
@@ -63,7 +63,7 @@ return {
 }]);
 
 // set up scope for each page
-app.controller('HomeController', function($scope, $interval, $timeout) {
+app.controller('HomeController', ['$scope', '$interval', '$timeout', function($scope, $interval, $timeout) {
   $scope.pageClass = 'page-home';
   $('html').css("-webkit-animation-play-state", "running");
   $('h1.logo .symbol').css("-webkit-animation-play-state", "running");
@@ -388,15 +388,15 @@ function loop() {
 
 loop();
 
-}); 
+}]); 
 
-app.controller('AboutController', function($scope) {
+app.controller('AboutController', ['$scope', function($scope) {
 	$scope.pageClass = 'page-about';
   $('html').css("-webkit-animation-play-state", "running");
   $('h1.logo .symbol').css("-webkit-animation-play-state", "running");
-}); 
+}]); 
 
-app.controller('WorkController', function($scope, $http) {
+app.controller('WorkController', ['$scope', '$http', function($scope, $http) {
     $('html').css("-webkit-animation-play-state", "paused");
     $('h1.logo .symbol').css("-webkit-animation-play-state", "paused");
 
@@ -424,13 +424,13 @@ app.controller('WorkController', function($scope, $http) {
 
 
 
-});
+}]);
 
-app.controller('ContactController', function($scope) {
+app.controller('ContactController', ['$scope', function($scope) {
 	$scope.pageClass = 'page-contact'; 
   $('html').css("-webkit-animation-play-state", "running");
   $('h1.logo .symbol').css("-webkit-animation-play-state", "running");
-}); 
+}]); 
 
 // Randomly generate triangles for the background
 var canvas = document.getElementById('canvas'),

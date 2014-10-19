@@ -46,7 +46,6 @@
     background-attachment: fixed;
     background-size: 1000% 1000%;
     @include animation(gradientbg 60s ease infinite);
-
 }
 
 /* leaving animations ----------------------------------------- */
@@ -226,6 +225,7 @@ header {
             padding: 0;
             position: absolute;
             margin-left: 9px;
+            outline: 1px solid white;
             @extend .gradientbg;
         }
         span {
@@ -455,7 +455,7 @@ header {
     height: 200px;
     max-width: 400px;
     width: 100%;
-    margin-top: 350px;
+    margin-top: 340px;
     a {
         color: #666;
         display: block;
