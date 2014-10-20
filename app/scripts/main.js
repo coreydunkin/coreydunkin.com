@@ -491,11 +491,11 @@ renderTriangles();
 // Animate gradient
 
 var colors = new Array(
-  [62,35,255],
-  [60,255,60],
-  [255,35,98],
-  [45,175,230],
-  [255,0,255],
+  [17,255,189],
+  [85,98,112],
+  [255,107,107],
+  [255,209,148],
+  [24,80,195],
   [255,128,0]);
 
 var step = 0;
@@ -546,7 +546,7 @@ var color2 = "#"+((r2 << 16) | (g2 << 8) | b2).toString(16);
   }
 }
 
-setInterval(updateGradient,10);
+// setInterval(updateGradient,10);
 
 // Global scripts
 $('header').removeClass('hidden').addClass('fadeInDown animated');
