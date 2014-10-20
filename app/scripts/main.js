@@ -1,5 +1,3 @@
-console.log('\'Allo \'Allo!');
-
 // Set up the page routing
 var app = angular.module('app', [
 	'ngRoute',
@@ -42,6 +40,24 @@ app.controller('HeaderController', [ '$scope', '$location', function($scope, $lo
     $scope.isActive = function(route) {
         return route === $location.path();
     }
+
+    // Mobile nav menu
+
+    $('i.fa-bars').off('click');
+    $('i.fa-bars').on('click', function() {
+      if($('nav').hasClass('open')) {
+        $('nav').removeClass('open');
+      } else {
+        $('nav').addClass('open');        
+      }
+    });
+
+    // hide mobile nav menu when list item is clicked
+
+    $('nav ul li, h1.logo').off('click');
+    $('nav ul li, h1.logo').on('click', function() {
+      $('nav').removeClass('open');
+    });
 }]);
 
 // end Header nav stuff
@@ -63,16 +79,35 @@ return {
 }]);
 
 // set up scope for each page
-app.controller('HomeController', ['$scope', '$interval', '$timeout', function($scope, $interval, $timeout) {
+app.controller('HomeController', ['$scope', '$interval', '$timeout', '$window', function($scope, $interval, $timeout, $window) {
+  // Play gradient animation
+  $scope.isPaused = $window.isPaused;
+  $window.isPaused = false;
+
+  // preload hero images
+  function preload(arrayOfImages) {
+      $(arrayOfImages).each(function(){
+          $('<img/>')[0].src = this;
+          // Alternatively you could use:
+          // (new Image()).src = this;
+      });
+  }
+  preload([
+      'images/1.jpg',
+      'images/2.jpg',
+      'images/3.jpg'
+  ]);
+
+
   $scope.pageClass = 'page-home';
-  $('html').css("-webkit-animation-play-state", "running");
-  $('h1.logo .symbol').css("-webkit-animation-play-state", "running");
+  // $('html').css("-webkit-animation-play-state", "running");
+  // $('h1.logo .symbol').css("-webkit-animation-play-state", "running");
   var heroText = $('h2.herotext'),
       subText = $('h2.subtext'),
       heroImg = $('.heroImg'),
   // Array of names
-  firstNames = ['COOL', 'CRAZY', 'CAT'],
-  secondNames = ['DUDE', 'DAMN', 'DOG'],
+  firstNames = ['DESIGNER', 'CREATIVE', 'IDEA'],
+  secondNames = ['DEVELOPER', 'CODER', 'MAKER'],
   firstNameCurrent = 1,
   secondNameCurrent = 1,
   // Array of images
@@ -390,46 +425,53 @@ loop();
 
 }]); 
 
-app.controller('AboutController', ['$scope', function($scope) {
-	$scope.pageClass = 'page-about';
-  $('html').css("-webkit-animation-play-state", "running");
-  $('h1.logo .symbol').css("-webkit-animation-play-state", "running");
+app.controller('AboutController', ['$scope', '$window', function($scope, $window) {
+    // Play gradient animation
+    $scope.isPaused = $window.isPaused;
+    $window.isPaused = false;
+
+  	$scope.pageClass = 'page-about';
+
 }]); 
 
-app.controller('WorkController', ['$scope', '$http', function($scope, $http) {
-    $('html').css("-webkit-animation-play-state", "paused");
-    $('h1.logo .symbol').css("-webkit-animation-play-state", "paused");
+app.controller('WorkController', ['$scope', '$window', '$http', function($scope, $window, $http) {
+    // Pause gradient animation to stop bugs when viewing work
+    $scope.isPaused = $window.isPaused;
+    $window.isPaused = true;
 
-    $http.get('scripts/workfeed.json').
-    // $http.get('https://cdn.contentful.com/spaces/playground/entries/nyancat?access_token=1d067d61111a2a1a06fdfc26e841e8a32de88d484277c4300a763b4c040c2316').
-      success(function(data, status, headers, config) {
-        $scope.work = data;
-      }).
-      error(function(data, status, headers, config) {
-        // log error
-    }); 
+    // $http.get('scripts/workfeed.json').
+    //   success(function(data, status, headers, config) {
+    //     $scope.work = data;
+    //   }).
+    //   error(function(data, status, headers, config) {
+    // }); 
+    
 
-    $('body').on('mouseenter', 'li', function() {
-      console.log('mouseenter');
-      $(this).find('p').stop().removeClass('hidden fadeOutRight').addClass('animated fadeInRight');
-      // $(this).find('p').removeClass('hidden ');
-      // $('html').css("-webkit-animation-play-state", "paused");
-    })
-    .on('mouseleave', 'li', function() {
-      console.log('mouseleave');
-      $(this).find('p').stop().removeClass('fadeInRight').addClass('animated fadeOutRight');
-      // $(this).find('p').addClass('hidden');
-      // $('html').css("-webkit-animation-play-state", "running");
+
+    $('body').off('click');
+    $('body').on('click', '.info', function() {
+        if ($(this).find('p').hasClass('right')) {
+          
+          $('.info').find('p').removeClass('fadeInRight left').addClass('animated fadeOutRight right');
+          
+          $(this).find('p').removeClass('hidden fadeOutRight right').addClass('animated fadeInRight left');
+
+        } else {
+        
+          $(this).find('p').removeClass('fadeInRight left').addClass('animated fadeOutRight right');
+        
+        }
     });
-
-
 
 }]);
 
-app.controller('ContactController', ['$scope', function($scope) {
+app.controller('ContactController', ['$scope', '$window', function($scope, $window) {
+  // Play gradient animation
+  $scope.isPaused = $window.isPaused;
+  $window.isPaused = false;
 	$scope.pageClass = 'page-contact'; 
-  $('html').css("-webkit-animation-play-state", "running");
-  $('h1.logo .symbol').css("-webkit-animation-play-state", "running");
+  // $('html').css("-webkit-animation-play-state", "running");
+  // $('h1.logo .symbol').css("-webkit-animation-play-state", "running");
 }]); 
 
 // Randomly generate triangles for the background
@@ -491,11 +533,11 @@ renderTriangles();
 // Animate gradient
 
 var colors = new Array(
-  [17,255,189],
   [85,98,112],
   [255,107,107],
-  [255,209,148],
   [24,80,195],
+  [255,209,148],
+  [17,255,189],
   [255,128,0]);
 
 var step = 0;
@@ -527,7 +569,7 @@ var g2 = Math.round(istep * c1_0[1] + step * c1_1[1]);
 var b2 = Math.round(istep * c1_0[2] + step * c1_1[2]);
 var color2 = "#"+((r2 << 16) | (g2 << 8) | b2).toString(16);
 
- $('html, .symbol').css({
+ $('html, .gradient').css({
     background: "-webkit-gradient(linear, left top, right top, from("+color1+"), to("+color2+"))"}).css({
     background: "-moz-linear-gradient(left, "+color1+" 0%, "+color2+" 100%)"});
   
@@ -546,7 +588,20 @@ var color2 = "#"+((r2 << 16) | (g2 << 8) | b2).toString(16);
   }
 }
 
-// setInterval(updateGradient,10);
+
+  var isPaused = true;
+  if ($(window).width() > 769) {
+    var ug = setInterval(function() {
+      if(!isPaused) {
+        updateGradient();
+      }
+    }, 10);    
+  }
+
+
+// setInterval(updateGradient,25);
 
 // Global scripts
 $('header').removeClass('hidden').addClass('fadeInDown animated');
+
+
