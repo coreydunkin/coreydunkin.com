@@ -168,7 +168,7 @@
 
 
 html {
-    @extend .gradientbg;
+    // @extend .gradientbg;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -226,7 +226,7 @@ header {
             position: absolute;
             margin-left: 9px;
             outline: 1px solid white;
-            @extend .gradientbg;
+            // @extend .gradientbg;
         }
         span {
             font-weight: 700;
@@ -394,15 +394,21 @@ header {
         li {
             overflow: hidden;
             display: block;
-            min-height: 380px;
             width: 100%;
-            background: grey;
             background-repeat: no-repeat;
             background-size: 100% auto;
             position: relative;
             margin-bottom: 20px;
+            height: auto;
+            img {
+                width: 100%;
+                z-index: 100;
+                height: auto;
+                display: block;
+            }
             .title-container {
                 float: left;
+                position: absolute;
                 a {
                     display: inline-block;
                     background: rgba(255,255,255,0.80);
@@ -418,6 +424,14 @@ header {
             .body-container {
                 float: right;
                 width: 30%;
+                position: absolute;
+                right: 0;
+                z-index: 200;
+                .info.btn {
+                    float: right;
+                    padding: 8px 10px;
+                    background: rgba(255,255,255,0.9);
+                }
             }
             h2 {
                 margin: 0;
@@ -475,7 +489,7 @@ header {
         margin-bottom: 20px;
         float: none;
         padding: 0;
-        @extend .gradientbg;
+        // @extend .gradientbg;
     }
 
 }
