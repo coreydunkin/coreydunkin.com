@@ -36,10 +36,14 @@ app.config(['$routeProvider', '$locationProvider',
 
 // Header nav stuff
 
-app.controller('HeaderController', [ '$scope', '$location', function($scope, $location) {
+app.controller('HeaderController', [ '$scope', '$location', '$controller', function($scope, $location, $controller) {
     $scope.isActive = function(route) {
         return route === $location.path();
     }
+    
+    $controller('WorkController', {$scope: $scope}); //This works
+
+    // console.log($controller('WorkController', {$scope: $scope}));
 
     // Mobile nav menu
 
@@ -530,6 +534,8 @@ var renderTriangles = function(){
 
 renderTriangles();  
 
+
+
 // Animate gradient
 
 var colors = new Array(
@@ -603,5 +609,8 @@ var color2 = "#"+((r2 << 16) | (g2 << 8) | b2).toString(16);
 
 // Global scripts
 $('header').removeClass('hidden').addClass('fadeInDown animated');
+
+// Set body to be min-height of document on page load //
+$('body').css('min-height', $(document).height()+'px');
 
 
