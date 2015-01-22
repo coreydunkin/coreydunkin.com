@@ -1,14 +1,21 @@
 <div class="wrapper work">
-<!-- re-enable when JSON filetype is supported on server
+
     <ul>
-        <li ng-repeat="item in work">
+        <li ng-repeat="item in workInfo">
 
 
 
         <div class="title-container">
         	<h2 ng-bind-html="item.title"></h2><br>
-            <a href="{{item.url}}" target="_blank">{{item.urltext}}</a>
+            <a href="{{item.url}}" target="_blank">{{item.urltext}}</a><br><br>
+
+
+
         </div>
+        <div class="cattags">
+            <h5 class="cat">{{item.category}}</h5><br>
+            <h6 class="tags">{{item.tags}}</h6>                
+        </div>        
 		<div class="body-container">
             <div class="info btn"><i class="fa fa-info-circle"></i>
             <p class="hidden right" ng-bind-html="item.desc"></p>
@@ -20,77 +27,6 @@
 
         </li>
     </ul> 
--->
-    <ul><!-- REMOVE THIS WHEN JSON IS SUPPORTED -->
-        <li>
-        <div class="title-container">
-            <h2>MCDONALDS.COM.AU<br><span>RELAUNCH</span></h2><br>
-            <a href="https://mcdonalds.com.au/" target="_blank">https://mcdonalds.com.au/</a>
-        </div>
-        <div class="body-container">
-            <div class="info btn"><i class="fa fa-info-circle"></i>
-            <p class="hidden right">My latest work involved a complete rebuild of the mcdonalds.com.au website, McDonald's wanted a completely responsive build that would look and work well for desktop/tablet/mobile, the website was built mobile first, complete with touch swipes, responsive sliders/tables and an informative map.</p>
-            </div> 
-            
-        </div>
-
-        <img alt="" src="images/work/maccas.png" style="background-color: rgb(141, 11, 9);">
-
-        </li>
-        <li>
-        <div class="title-container">
-            <h2>VOLKSWAGEN<br><span>NEWSLETTER</span></h2><br>
-            <a href="" target="_blank"></a>
-        </div>
-        <div class="body-container">
-            <div class="info btn"><i class="fa fa-info-circle"></i>
-            <p class="hidden right">Volkswagen requested a website that was built for dealers, they needed to be able to login, upload and view their various marketing campaigns. The website had to be built to be iPad friendly and needed special considerations for touch control. I was responsible for the front-end development. Website was produced for Tribal DDB. View the site here (requires a login, which I can provide): Volkswagen Dealer Newsletter</p>
-            </div> 
-            
-        </div>
-
-        <img alt="" src="images/work/dealernewsletter.png" style="background-color: rgb(38, 117, 173);">
-
-        </li>
-        <li>
-        <div class="title-container">
-            <h2>MCDONALD'S<br><span>OPEN DOORS</span></h2><br>
-            <a href="http://www.coreydunkin.com/clients/opendoors/" target="_blank">WEBSITE LINK</a>
-        </div>
-        <div class="body-container">
-            <div class="info btn"><i class="fa fa-info-circle"></i>
-            <p class="hidden right">I worked with a team in creating a website for the McDonald's Open Doors Tour. I was responsible for the web design and front-end development. McDonald's wanted to give customers the opportunity to visit various stores around Australia and see how their food is made.</p>
-            </div> 
-            
-        </div>
-
-        <img alt="" src="images/work/mcdonalds.png" style="background-color: rgb(141, 11, 9);">
-
-        </li>
-        <li>
-        <div class="title-container">
-            <h2>VOLKSWAGEN<br><span>MOBILE</span></h2><br>
-            <a href="http://m.volkswagen.com.au/" target="_blank">http://m.volkswagen.com.au/</a>
-        </div>
-        <div class="body-container">
-            <div class="info btn"><i class="fa fa-info-circle"></i>
-            <p class="hidden right">Volkswagen came to Tribal DDB for a complete mobile build of their current website, the build had to work on various mobile devices and had to be fast, snappy and appealing. I was responsible for the front-end build. Work was produced for Tribal DDB.</p>
-            </div> 
-            
-        </div>
-
-        <img alt="" src="images/work/volkswagenmobile.png" style="background-color: rgb(38, 117, 173);">
-
-        </li>
-        <li>
-        <div class="title-container">
-            <h2>TELSTRA<br><span>EMAILS</span></h2><br>
-            <a href="" target="_blank"></a>
-        </div>
 
 
-        <img alt="" src="images/work/telstraemail.png" style="background-color: rgb(12, 97, 98);">
-
-        </li>
-    </ul><!-- REMOVE THIS WHEN JSON IS SUPPORTED -->
 </div><!-- end .work -->

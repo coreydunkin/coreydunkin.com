@@ -449,7 +449,102 @@ app.controller('WorkController', ['$scope', '$window', '$http', function($scope,
     //   }).
     //   error(function(data, status, headers, config) {
     // }); 
-    
+    $scope.workInfo = [
+      {
+        "title": "LANDING <br><span>HELICOPTER DOCK</span>",
+        "heroimg": "lhd-info.jpg",
+        "herocolor": "#343838",
+        "category": "Front-end Development",
+        "tags": "AngularJS, Gulp, SASS, JQuery",
+        "desc": "My latest work required building a website to showcase the Landing Helicopter Dock for the Australian Defence Force. The site features animated infographics served in a one-page layout. Built using AngularJS, Gulp and Sass.",
+        "subimgs": {
+          "subimg1": "sub1.jpg",
+          "subimg2": "sub2.jpg"
+        },
+        "url": "http://www.defencejobs.gov.au/navy/technology/LHD/",
+        "urltext": "LHD website"
+      },
+      {
+        "title": "HAVAS <br><span>CHRISTMAS FACEWRAP</span>",
+        "heroimg": "facewrap.png",
+        "herocolor": "#e64a63",
+        "category": "Front-end Development",
+        "tags": "AngularJS, Gulp, SASS, JQuery",
+        "desc": "I got the opportunity to build the christmas themed webapp for Havas, the idea is to be able to upload your facebook photos of you and your friends, implement them into a wrapping paper and then get them printed to wrap your presents in, part of the money was donated to charity. Built using AngularJS, Gulp and Sass.",
+        "subimgs": {
+          "subimg1": "sub1.jpg",
+          "subimg2": "sub2.jpg"
+        },
+        "url": "https://www.facewrap.com.au/",
+        "urltext": "facewrap.com.au"
+      },            
+      {
+        "title": "MCDONALDS.COM.AU<br><span>RELAUNCH</span>",
+        "heroimg": "maccas.png",
+        "herocolor": "#8d0b09",
+        "category": "Web Design + Front-end Development",
+        "tags": "LESS, JQuery",
+        "desc": "My work involved a complete rebuild of the mcdonalds.com.au website, McDonald's wanted a completely responsive build that would look and work well for desktop/tablet/mobile, the website was built mobile first, complete with touch swipes, responsive sliders/tables and an informative map.",
+        "subimgs": {
+          "subimg1": "sub1.jpg",
+          "subimg2": "sub2.jpg"
+        },
+        "url": "https://mcdonalds.com.au/",
+        "urltext": "https://mcdonalds.com.au/"
+      },
+      {
+        "title": "VOLKSWAGEN<br><span>NEWSLETTER</span>",
+        "heroimg": "dealernewsletter.png",
+        "herocolor": "#2675ad",
+        "category": "Web Design + Front-end Development",
+        "tags": "LESS, JQuery",
+        "desc": "Volkswagen requested a website that was built for dealers, they needed to be able to login, upload and view their various marketing campaigns. The website had to be built to be iPad friendly and needed special considerations for touch control. I was responsible for the front-end development. Website was produced for Tribal DDB. View the site here (requires a login, which I can provide): Volkswagen Dealer Newsletter",
+        "subimgs": {
+          "subimg1": "sub1.jpg",
+          "subimg2": "sub2.jpg"
+        }
+      },
+      {
+        "title": "MCDONALD'S<br><span>OPEN DOORS</span>",
+        "heroimg": "mcdonalds.png",
+        "herocolor": "#8d0b09",
+        "category": "Web Design + Front-end Development",
+        "tags": "LESS, JQuery",
+        "desc": "I worked with a team in creating a website for the McDonald's Open Doors Tour. I was responsible for the web design and front-end development. McDonald's wanted to give customers the opportunity to visit various stores around Australia and see how their food is made.",
+        "subimgs": {
+          "subimg1": "sub1.jpg",
+          "subimg2": "sub2.jpg"
+        },
+        "url": "http://www.coreydunkin.com/clients/opendoors/",
+        "urltext": "WEBSITE LINK"
+      },
+      {
+        "title": "VOLKSWAGEN<br><span>MOBILE</span>",
+        "heroimg": "volkswagenmobile.png",
+        "herocolor": "#2675ad",
+        "category": "Web Design + Front-end Development",
+        "tags": "LESS, JQuery",
+        "desc": "Volkswagen came to Tribal DDB for a complete mobile build of their current website, the build had to work on various mobile devices and had to be fast, snappy and appealing. I was responsible for the front-end build. Work was produced for Tribal DDB.",
+        "subimgs": {
+          "subimg1": "sub1.jpg",
+          "subimg2": "sub2.jpg"
+        },
+        "url": "http://m.volkswagen.com.au/",
+        "urltext": "http://m.volkswagen.com.au/"
+      },
+      {
+        "title": "TELSTRA<br><span>EMAILS</span>",
+        "heroimg": "telstraemail.png",
+        "herocolor": "#0c6162",
+        "category": "EDM Design",
+        "tags": "Photoshop",
+        "desc": "I have designed and developed various edms for Telstra.",
+        "subimgs": {
+          "subimg1": "sub1.jpg",
+          "subimg2": "sub2.jpg"
+        }
+      }
+    ]
 
 
     $('body').off('click');
